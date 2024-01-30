@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom,rgb(61, 2, 61), rgba(82, 3, 82, 0.849));
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0px auto;
+}
+
+header {
+    color: white;
+    margin-top: 60px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 35px;
+    font-size: 36px;
+}
+
+header form {
+    margin: 0px auto;
+    background-color: #682668;
+    padding: 8px;
+    width: 450px;
+    text-align: left;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input#nova-tarefa {
+    font-size: 20px;
+    background-color: #682668;
+    border: none;
+    color: white;
+    margin-left: 8px;
+    width: 420px;
+}
+
+input#nova-tarefa::placeholder {
+    color: white;
+}
+
+input#nova-tarefa:focus {
+    outline: none;
+}
+
+#botao-adicionar {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-weight: bolder;
+    font-size: 24px;
+    border: none;
+    color: white;
+    background-image: linear-gradient(to bottom,#e4a7e4, #ad6ead, #643b64);
+    cursor: pointer;
+}
+
+#botao-adicionar:hover {
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.637);
+}
+
+main {
+    background-color: #682668;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+main {
+    display: none;
+}
+
+main ul li {
+    list-style: none;
+    color: white;
+    font-weight: 300;
+    border-bottom: 1px solid white;
+    padding: 15px;
+    display: none;
+}
+
+main ul li:hover {
+    cursor: pointer;
+}
+
+main ul li:last-child {
+    border-bottom: none; 
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+

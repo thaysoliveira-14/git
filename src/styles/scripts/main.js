@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let numeroMaximo = document.getElementById('numero-maximo').value
         numeroMaximo = parseInt(numeroMaximo)
         let numeroAleatorio = Math.random() * numeroMaximo
-        console.log(numeroAleatorio)
+        alert(numeroAleatorio)
     })
 })

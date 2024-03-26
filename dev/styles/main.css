@@ -43,3 +43,22 @@ input {
   color: #fff;
   border-bottom: 6px solid #fff;
 }
+.resultado {
+  padding: 16px;
+  margin: 120px auto;
+  border: 5px double #fff;
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.resultado p {
+  font-size: 1.2em;
+}
+.resultado span {
+  display: block;
+  font-weight: bold;
+  color: #ffd900;
+  font-size: 3em;
+  margin-top: 16px;
+}

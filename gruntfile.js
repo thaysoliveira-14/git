@@ -88,6 +88,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['less:development', 'replace:dev', 'watch']);
     grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist', 'clean']);
 }

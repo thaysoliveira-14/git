@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const followingElement = document.querySelector('#following')
     const linkProfileElement = document.querySelector('#link-profile')
 
-    fetch('https://api.github.com/users/thaysoliveira-14')
+    fetch('https://api.github.com/users/usuario-inexistente')
         .then(function (resposta) {
         return resposta.json()
         })
@@ -19,5 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
             followersElement.innerHTML = json.followers
             followingElement.innerHTML = json.following
             linkProfileElement.href = json.html_url
+        })
+        .catch(function (error) {
+            alert('Ocorreu um erro: Tente novamente mais tarde')
+        })
+        .finally(function () {
+            console.log('requisição finalizada')
         })
 })

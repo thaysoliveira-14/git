@@ -7,9 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const followingElement = document.querySelector('#following')
     const linkProfileElement = document.querySelector('#link-profile')
 
-    fetch('https://api.github.com/users/usuario-inexistente')
+        fetch('https://api.github.com/users/thaysoliveira-14')
         .then(function (resposta) {
-        return resposta.json()
+            if (!resposta.ok) {
+                throw new Error (`Requisição da API falhou com o status ${resposta.json()}`)
+            }
+            return resposta.json()
         })
         .then(function (json) {
             avatarElement.src = json.avatar_url
@@ -21,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
             linkProfileElement.href = json.html_url
         })
         .catch(function (error) {
-            alert('Ocorreu um erro: Tente novamente mais tarde')
+            alert('Ocorreu um erro: Tente novamente mais tarde', error)
+            console.error('Erro:', error)
         })
         .finally(function () {
             console.log('requisição finalizada')
